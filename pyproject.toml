@@ -20,7 +20,12 @@ authors = [
 keywords = ["robotics", "lifelong-learning", "robot-learning", "benchmark", "knowledge-transfer"]
 
 requires-python = ">=3.8"
-dependencies = []
+dependencies = [
+ "robosuite==1.4.0",
+ "bddl==1.0.1",
+ "future==0.18.2",
+ "easydict==1.9" 
+]
 
 
 [tool.setuptools.packages.find]
