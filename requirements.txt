@@ -14,6 +14,10 @@ attrs==25.3.0 \
 bddl==1.0.1 \
     --hash=sha256:1fa4e6e5050b93888ff6fd8455c39bfb29d3864ce06b4c37c0f781f513a2ae26
     # via libero
+cloudpickle==3.1.1 \
+    --hash=sha256:b216fa8ae4019d5482a8ac3c95d8f6346115d8835911fd4aefd1a445e4242c64 \
+    --hash=sha256:c8c5a44295039331ee9dad40ba100a9c7297b6f988e50e87ccdf3765a668350e
+    # via gym
 colorama==0.4.6 ; sys_platform == 'win32' \
     --hash=sha256:08695f5cb7ed6e0531a20572697297273c47b8cae5a63ffc6d6ed5c201be6e44 \
     --hash=sha256:4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6
@@ -59,10 +63,19 @@ glfw==2.10.0 \
     --hash=sha256:801e55d8581b34df9aa2cfea43feb06ff617576e2a8cc5dac23ee75b26d10abe \
     --hash=sha256:c6f292fdaf3f9a99e598ede6582d21c523a6f51f8f5e66213849101a6bcdc699
     # via mujoco
-importlib-metadata==8.5.0 ; python_full_version < '3.9' \
+gym==0.25.2 \
+    --hash=sha256:c8323f4c6f37363710b519742a0094316deddc9d8fc9e3f6deac08d6da47150c
+    # via libero
+gym-notices==0.1.0 \
+    --hash=sha256:9f9477ef68a8c15e42625d4fa53631237e3e6ae947f325b5c149c081499adc1b \
+    --hash=sha256:a943af4446cb619d04fd1e470b9272b4473e08a06d1c7cc9005755a4a0b8c905
+    # via gym
+importlib-metadata==8.5.0 ; python_full_version < '3.10' \
     --hash=sha256:45e54197d28b7a7f1559e60b95e7c567032b602131fbd588f1497f47880aa68b \
     --hash=sha256:71522656f0abace1d072b9e5481a48f07c138e00f079c38c8f883823f9c26bd7
-    # via numba
+    # via
+    #   gym
+    #   numba
 importlib-resources==6.4.5 ; python_full_version < '3.9' \
     --hash=sha256:980862a1d16c9e147a59603677fa2aa5fd82b87f223b6cb870695bcfce830065 \
     --hash=sha256:ac29d5f956f01d5e4bb63102a5a19957f1b9175e45649977264a1416783bb717
@@ -378,6 +391,7 @@ numpy==1.24.4 ; python_full_version < '3.9' \
     --hash=sha256:f3a86ed21e4f87050382c7bc96571755193c4c1392490744ac73d660e8f564a9
     # via
     #   bddl
+    #   gym
     #   mujoco
     #   numba
     #   opencv-python
@@ -431,6 +445,7 @@ numpy==2.0.2 ; python_full_version == '3.9.*' \
     --hash=sha256:f26b258c385842546006213344c50655ff1555a9338e2e5e02a0756dc3e803dd
     # via
     #   bddl
+    #   gym
     #   mujoco
     #   numba
     #   opencv-python
@@ -494,6 +509,7 @@ numpy==2.2.6 ; python_full_version >= '3.10' \
     --hash=sha256:fee4236c876c4e8369388054d02d0e9bb84821feb1a64dd59e137e6511a551f8
     # via
     #   bddl
+    #   gym
     #   mujoco
     #   numba
     #   opencv-python
@@ -1327,4 +1343,5 @@ zipp==3.23.0 ; python_full_version >= '3.9' \
     --hash=sha256:a07157588a12518c9d4034df3fbbee09c814741a33ff63c05fa29d26a2404166
     # via
     #   etils
+    #   importlib-metadata
     #   importlib-resources
